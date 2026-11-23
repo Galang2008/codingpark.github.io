@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+// Mengimpor kelas atau fungsi yang digunakan pada file ini.
+use Illuminate\Foundation\Application;
+// Mengimpor kelas atau fungsi yang digunakan pada file ini.
+use Symfony\Component\Console\Input\ArgvInput;
+
+// Menjalankan instruksi PHP sebagai bagian dari proses ini.
+define('LARAVEL_START', microtime(true));
+
+// Register the Composer autoloader...
+// Memuat komponen yang dibutuhkan oleh file ini.
+require __DIR__.'/vendor/autoload.php';
+
+// Bootstrap Laravel and handle the command...
+/** @var Application $app */
+// Menyimpan atau memperbarui nilai variabel $app untuk proses berikutnya.
+$app = require_once __DIR__.'/bootstrap/app.php';
+
+// Menyimpan atau memperbarui nilai variabel $status untuk proses berikutnya.
+$status = $app->handleCommand(new ArgvInput);
+
+// Menjalankan instruksi PHP sebagai bagian dari proses ini.
+exit($status);

@@ -1,0 +1,475 @@
+/* Menetapkan instruksi CSS untuk mengatur tampilan. */
+@import './app.css';
+
+/* Memilih elemen yang akan menerima aturan gaya berikutnya. */
+:root {
+    /* Mengatur properti CSS --owner-blue untuk elemen terkait. */
+    --owner-blue: #2563eb;
+    /* Mengatur properti CSS --owner-navy untuk elemen terkait. */
+    --owner-navy: #1e3a8a;
+    /* Mengatur properti CSS --owner-cyan untuk elemen terkait. */
+    --owner-cyan: #06b6d4;
+    /* Mengatur properti CSS --owner-bg untuk elemen terkait. */
+    --owner-bg: #f8fafc;
+    /* Mengatur properti CSS --owner-card untuk elemen terkait. */
+    --owner-card: #fff;
+    /* Mengatur properti CSS --owner-line untuk elemen terkait. */
+    --owner-line: #e8edf5;
+    /* Mengatur properti CSS --owner-text untuk elemen terkait. */
+    --owner-text: #17233d;
+    /* Mengatur properti CSS --owner-muted untuk elemen terkait. */
+    --owner-muted: #78869b;
+/* Mengakhiri blok aturan gaya ini. */
+}
+
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+* { box-sizing: border-box; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+body.owner-shell { min-height: 100vh; margin: 0; color: var(--owner-text); background: var(--owner-bg); font-family: 'DM Sans', Inter, sans-serif; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+button, input { font: inherit; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+button { cursor: pointer; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-app { min-height: 100vh; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar { position: fixed; inset: 0 auto 0 0; z-index: 20; display: flex; flex-direction: column; width: 252px; padding: 26px 16px 18px; background: var(--owner-card); border-right: 1px solid var(--owner-line); transition: width .2s, transform .2s; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-brand { display: flex; align-items: center; gap: 10px; margin: 0 10px 49px; color: var(--owner-navy); font-size: 19px; font-weight: 800; letter-spacing: -.5px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-brand > span:last-child > span { color: var(--owner-blue); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-brand-mark { display: grid; place-items: center; width: 37px; height: 37px; color: #fff; background: linear-gradient(140deg, var(--owner-blue), var(--owner-cyan)); border-radius: 12px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-brand-mark svg { width: 21px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-caption, .topbar-kicker, .section-kicker { color: #99a5b8; font-size: 10px; font-weight: 800; letter-spacing: 1.25px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-caption { margin: 0 12px 12px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-nav { display: grid; gap: 5px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-nav-link { display: flex; align-items: center; gap: 12px; min-height: 43px; padding: 0 12px; color: #7d8ba0; border-radius: 11px; font-size: 12px; font-weight: 600; transition: .18s; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-nav-link > svg { width: 17px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-nav-link:hover, .owner-nav-link.active { color: var(--owner-blue); background: #eff5ff; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-nav-link.active { font-weight: 700; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-nav-link small { margin-left: auto; color: #a7b2c2; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-bottom { display: flex; align-items: center; gap: 7px; margin-top: auto; padding: 14px 5px 0; border-top: 1px solid var(--owner-line); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-account { display: flex; align-items: center; gap: 9px; min-width: 0; flex: 1; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-avatar { display: grid; place-items: center; flex: none; width: 35px; height: 35px; color: #fff; background: linear-gradient(140deg, var(--owner-blue), var(--owner-cyan)); border-radius: 11px; font-size: 12px; font-weight: 800; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-account strong, .sidebar-account small, .profile-copy strong, .profile-copy small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-account strong, .profile-copy strong { max-width: 140px; font-size: 11px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.sidebar-account small, .profile-copy small { margin-top: 3px; color: #98a4b5; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.collapse-button, .topbar-icon { display: grid; place-items: center; flex: none; width: 36px; height: 36px; color: #76849a; background: var(--owner-card); border: 1px solid var(--owner-line); border-radius: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.collapse-button svg, .topbar-icon svg { width: 16px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.collapse-button:hover, .topbar-icon:hover { color: var(--owner-blue); border-color: #b8cef6; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-main { min-height: 100vh; margin-left: 252px; transition: margin-left .2s; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; min-height: 78px; padding: 0 36px; background: var(--owner-card); border-bottom: 1px solid var(--owner-line); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.topbar-title, .topbar-actions { display: flex; align-items: center; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.topbar-title { gap: 12px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.topbar-title h1 { margin: 4px 0 0; font: 700 19px 'Space Grotesk', Inter, sans-serif; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.topbar-actions { gap: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.top-search, .table-search { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px; background: #f8fafd; border: 1px solid var(--owner-line); border-radius: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.top-search { width: 205px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.top-search svg, .table-search svg { width: 15px; color: #9aa6b8; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.top-search input, .table-search input { width: 100%; min-width: 0; color: var(--owner-text); background: transparent; border: 0; outline: 0; font-size: 11px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.top-search input::placeholder, .table-search input::placeholder { color: #a1adbc; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.notification-icon { position: relative; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.notification-icon span { position: absolute; top: 7px; right: 7px; width: 6px; height: 6px; background: var(--owner-cyan); border: 1px solid #fff; border-radius: 50%; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-menu-wrap { position: relative; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-trigger { display: flex; align-items: center; gap: 9px; padding: 0 0 0 5px; color: var(--owner-text); background: none; border: 0; text-align: left; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-trigger > svg { width: 14px; color: #98a4b5; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown { position: absolute; top: calc(100% + 13px); right: 0; z-index: 30; display: none; width: 220px; padding: 12px; background: var(--owner-card); border: 1px solid var(--owner-line); border-radius: 12px; box-shadow: 0 12px 32px #182b491c; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown.open { display: block; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown > div { padding: 4px 6px 11px; border-bottom: 1px solid var(--owner-line); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown strong, .profile-dropdown small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown small { margin-top: 4px; color: var(--owner-muted); font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown form { margin-top: 7px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown button { display: flex; align-items: center; gap: 9px; width: 100%; padding: 9px 7px; color: #d14360; background: none; border: 0; border-radius: 7px; font-size: 11px; text-align: left; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown button:hover { background: #fff1f4; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.profile-dropdown button svg { width: 15px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.mobile-menu { display: none; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-content { width: min(100%, 1500px); margin: 0 auto; padding: 29px 36px 22px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.welcome-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.welcome-row h2 { margin: 6px 0 5px; color: var(--owner-navy); font: 700 24px 'Space Grotesk', Inter, sans-serif; letter-spacing: -.55px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.welcome-row p { margin: 0; color: var(--owner-muted); font-size: 12px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.today-label { display: flex; align-items: center; gap: 8px; padding: 10px 12px; color: #65748b; background: var(--owner-card); border: 1px solid var(--owner-line); border-radius: 10px; font-size: 11px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.today-label svg { width: 15px; color: var(--owner-blue); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-stat-card, .panel { background: var(--owner-card); border: 1px solid var(--owner-line); border-radius: 15px; box-shadow: 0 8px 26px #1d375f0a; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-stat-card { min-width: 0; padding: 17px 18px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-icon { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-icon svg { width: 18px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-icon.blue { color: #2563eb; background: #eff5ff; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-icon.cyan { color: #0891b2; background: #e9fbff; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-icon.violet { color: #7654d9; background: #f2efff; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-icon.green { color: #07936d; background: #eafaf4; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-change { padding: 4px 6px; color: #078263; background: #e9faf3; border-radius: 6px; font-size: 9px; font-weight: 700; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.stat-change.negative { color: #d94462; background: #fff0f3; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-stat-card p { margin: 15px 0 5px; color: #79869a; font-size: 11px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-stat-card > strong { display: block; overflow: hidden; color: #192844; font: 700 clamp(18px, 1.7vw, 23px) 'Space Grotesk', Inter, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-stat-card > small { display: block; margin-top: 5px; color: #a0abba; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.panel { padding: 18px 20px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.filter-panel { margin-top: 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.panel-heading h3 { margin: 0; font: 700 14px 'Space Grotesk', Inter, sans-serif; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.panel-heading p { margin: 5px 0 0; color: #94a0b2; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.live-status { display: flex; align-items: center; gap: 6px; color: #678078; font-size: 9px; white-space: nowrap; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.live-status i { width: 6px; height: 6px; background: #10b981; border-radius: 50%; box-shadow: 0 0 0 3px #10b98120; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.filter-controls { display: flex; align-items: end; gap: 11px; margin-top: 17px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.date-field { display: grid; gap: 6px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.date-field span { color: #8190a4; font-size: 9px; font-weight: 700; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.date-field input { width: 155px; height: 36px; padding: 0 9px; color: #4b5c75; background: var(--owner-card); border: 1px solid var(--owner-line); border-radius: 8px; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.date-separator { padding-bottom: 10px; color: #9aa6b8; font-size: 13px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 35px; padding: 0 11px; border-radius: 8px; font-size: 10px; font-weight: 700; transition: .18s; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.button svg { width: 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.button-primary { color: #fff; background: var(--owner-blue); border: 1px solid var(--owner-blue); box-shadow: 0 4px 9px #2563eb22; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.button-primary:hover { background: #1d4ed8; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.button-outline { color: #61718a; background: var(--owner-card); border: 1px solid var(--owner-line); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.button-outline:hover { color: var(--owner-blue); border-color: #bfd2f4; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.quick-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.quick-filters button { padding: 6px 9px; color: #77869b; background: #fff; border: 1px solid var(--owner-line); border-radius: 7px; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.quick-filters button:hover, .quick-filters button.selected { color: var(--owner-blue); background: #eff5ff; border-color: #c9dafa; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.filter-error { margin: 11px 0 0; color: #c53b54; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.summary-strip { display: flex; flex-wrap: wrap; gap: 9px 22px; margin: 13px 0; padding: 0 3px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.summary-strip > span { display: flex; align-items: center; gap: 7px; color: #8290a4; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.summary-strip svg { width: 14px; color: var(--owner-blue); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.summary-strip strong { color: #33435d; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.charts-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .85fr); gap: 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-panel { min-width: 0; padding: 18px 20px 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-badge { display: flex; align-items: center; gap: 5px; padding: 6px 8px; color: #3970cf; background: #eff5ff; border-radius: 7px; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-badge svg { width: 13px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.cyan-badge { color: #0785a0; background: #e9fbff; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-canvas { position: relative; width: 100%; margin-top: 13px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.revenue-chart { height: 210px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.vehicle-chart { height: 172px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-footnote { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; color: #8c99aa; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-footnote span { display: flex; align-items: center; gap: 6px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-footnote span i { width: 7px; height: 7px; background: var(--owner-cyan); border-radius: 50%; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.chart-footnote strong { color: #64738a; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-panel { margin-top: 14px; padding: 17px 0 0; overflow: hidden; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-heading { align-items: center; padding: 0 19px 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.export-actions { display: flex; gap: 7px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 19px; background: #fbfcfe; border-block: 1px solid var(--owner-line); color: #8794a7; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-search { width: 190px; height: 30px; background: var(--owner-card); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-search input { font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll { overflow: auto; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll table { width: 100%; min-width: 1020px; border-collapse: collapse; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll th, .table-scroll td { padding: 11px 12px; border-bottom: 1px solid #f0f3f7; text-align: left; white-space: nowrap; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll th { color: #96a2b3; background: #fff; font-size: 8px; font-weight: 800; letter-spacing: .45px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll td { color: #66758b; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll tbody tr:hover { background: #fbfdff; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-scroll td strong { color: #263650; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.status-badge { display: inline-block; padding: 4px 7px; border-radius: 5px; font-size: 8px; font-weight: 700; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.status-done { color: #078263; background: #e9faf3; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.status-active { color: #a36800; background: #fff5d9; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.empty-row { padding: 28px !important; color: #98a4b4 !important; text-align: center !important; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-pagination { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 19px; color: #8b98aa; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-pagination > div { display: flex; align-items: center; gap: 8px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-pagination button { display: grid; place-items: center; width: 27px; height: 27px; color: #74839a; background: #fff; border: 1px solid var(--owner-line); border-radius: 7px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-pagination button:disabled { color: #bbc3ce; background: #fafbfd; cursor: not-allowed; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-pagination button svg { width: 13px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.table-pagination > div > span { min-width: 35px; text-align: center; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.officers-panel { margin-top: 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.officers-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.officer-row { display: flex; align-items: center; gap: 9px; min-width: 0; padding: 10px; background: #fafbfd; border: 1px solid #f0f3f7; border-radius: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.officer-rank { display: grid; place-items: center; flex: none; width: 20px; height: 20px; color: #5676a7; background: #eff5ff; border-radius: 6px; font-size: 9px; font-weight: 800; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.small-avatar { width: 28px; height: 28px; border-radius: 9px; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.officer-row strong { overflow: hidden; flex: 1; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.officer-row > span:last-child { color: #8b98aa; font-size: 8px; white-space: nowrap; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.empty-officers { color: #98a4b4; font-size: 10px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-footer { display: flex; justify-content: center; gap: 7px; padding: 22px 0 4px; color: #a0abba; font-size: 9px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-footer span { color: var(--owner-cyan); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar.collapsed { width: 76px; padding-inline: 12px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar.collapsed .owner-brand { justify-content: center; margin-inline: 0; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar.collapsed .owner-brand > span:last-child, .owner-sidebar.collapsed .sidebar-caption, .owner-sidebar.collapsed .owner-nav-link span, .owner-sidebar.collapsed .owner-nav-link small, .owner-sidebar.collapsed .sidebar-account > span:last-child { display: none; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar.collapsed .owner-nav-link { justify-content: center; padding-inline: 0; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar.collapsed .sidebar-account { justify-content: center; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-sidebar.collapsed + .owner-main { margin-left: 76px; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.owner-app.dark-mode { --owner-bg: #0e1625; --owner-card: #151f30; --owner-line: #273448; --owner-text: #e5ecf6; --owner-muted: #9aa9be; background: var(--owner-bg); color: var(--owner-text); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .owner-topbar, .dark-mode .owner-sidebar, .dark-mode .profile-dropdown { background: var(--owner-card); }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .welcome-row h2, .dark-mode .owner-stat-card > strong, .dark-mode .profile-trigger, .dark-mode .summary-strip strong, .dark-mode .table-scroll td strong { color: #e0e9f8; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .owner-stat-card, .dark-mode .panel { box-shadow: none; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .table-toolbar, .dark-mode .officer-row, .dark-mode .top-search, .dark-mode .table-search, .dark-mode .quick-filters button { background: #111a29; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .table-scroll th, .dark-mode .table-scroll tbody tr:hover { background: #151f30; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .table-scroll td, .dark-mode .table-scroll th { border-color: #273448; }
+/* Menetapkan aturan tampilan untuk elemen terkait. */
+.dark-mode .date-field input, .dark-mode .button-outline, .dark-mode .table-pagination button, .dark-mode .topbar-icon { color: #c0cce0; background: var(--owner-card); border-color: var(--owner-line); }
+
+/* Menerapkan aturan gaya pada kondisi media yang ditentukan. */
+@media (max-width: 1120px) {
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-content { padding-inline: 24px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-topbar { padding-inline: 24px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .charts-grid { grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr); }
+/* Mengakhiri blok aturan gaya ini. */
+}
+/* Menerapkan aturan gaya pada kondisi media yang ditentukan. */
+@media (max-width: 760px) {
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar { transform: translateX(-100%); box-shadow: 14px 0 35px #0f24451c; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar.open { transform: translateX(0); }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar.collapsed { width: 252px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar.collapsed .owner-brand > span:last-child, .owner-sidebar.collapsed .sidebar-caption, .owner-sidebar.collapsed .owner-nav-link span, .owner-sidebar.collapsed .owner-nav-link small, .owner-sidebar.collapsed .sidebar-account > span:last-child { display: initial; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar.collapsed .owner-nav-link { justify-content: flex-start; padding-inline: 12px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar.collapsed .owner-brand { justify-content: flex-start; margin-inline: 10px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar.collapsed + .owner-main { margin-left: 0; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-main { margin-left: 0; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-topbar { min-height: 68px; padding: 0 16px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .mobile-menu { display: grid; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .topbar-kicker, .top-search, .notification-icon, .profile-copy, .profile-trigger > svg { display: none; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .topbar-title h1 { margin: 0; font-size: 17px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .topbar-actions { gap: 7px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .profile-trigger { padding: 0; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-content { padding: 21px 14px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .welcome-row { align-items: flex-start; flex-direction: column; gap: 11px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .welcome-row h2 { font-size: 21px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .today-label { padding: 7px 9px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .stat-grid { gap: 9px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-stat-card { padding: 13px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-stat-card p { min-height: 26px; margin-top: 12px; line-height: 1.3; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-stat-card > strong { font-size: 17px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .panel { padding: 15px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .filter-panel { padding: 15px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .live-status { display: none; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .filter-controls { flex-wrap: wrap; align-items: end; gap: 9px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .date-field { flex: 1; min-width: 128px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .date-field input { width: 100%; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .date-separator { display: none; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .filter-controls .button { width: 100%; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .charts-grid { grid-template-columns: 1fr; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .revenue-chart { height: 190px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .vehicle-chart { height: 165px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .summary-strip { gap: 9px 14px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-panel { padding: 15px 0 0; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-heading { align-items: flex-start; flex-direction: column; padding: 0 14px 12px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .export-actions { width: 100%; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .export-actions .button { flex: 1; padding-inline: 6px; font-size: 9px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-toolbar { align-items: flex-start; flex-direction: column; padding-inline: 14px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-search { width: 100%; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-pagination { padding-inline: 14px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .officers-list { grid-template-columns: 1fr; }
+/* Mengakhiri blok aturan gaya ini. */
+}
+/* Menerapkan aturan gaya pada kondisi media yang ditentukan. */
+@media (max-width: 380px) {
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-stat-card { padding: 10px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-stat-card > strong { font-size: 15px; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .stat-change { font-size: 8px; }
+/* Mengakhiri blok aturan gaya ini. */
+}
+/* Menerapkan aturan gaya pada kondisi media yang ditentukan. */
+@media print {
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    body.owner-shell { background: #fff; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-sidebar, .owner-topbar, .filter-panel, .export-actions, .table-toolbar, .table-pagination, .officers-panel, .owner-footer { display: none !important; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-main { margin: 0 !important; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-content { width: 100%; padding: 0; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .owner-stat-card, .panel { box-shadow: none; break-inside: avoid; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .charts-grid { grid-template-columns: 1fr 1fr; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-scroll { overflow: visible; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-scroll table { min-width: 0; }
+    /* Menetapkan aturan tampilan untuk elemen terkait. */
+    .table-scroll th, .table-scroll td { padding: 5px 4px; font-size: 7px; }
+/* Mengakhiri blok aturan gaya ini. */
+}

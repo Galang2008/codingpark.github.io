@@ -1,0 +1,2 @@
+{{-- Membuka elemen <article> untuk menyusun bagian antarmuka. --}}
+<article class="stat-card {{ $tone ?? '' }}"><div class="stat-top"><span class="stat-icon"><i data-lucide="{{ $icon }}"></i></span><span class="stat-trend {{ ($negative ?? false) ? 'negative' : '' }}">{{ $trend ?? '' }}</span></div><p>{{ $label }}</p><strong>{{ $value }}</strong>@isset($caption)<small>{{ $caption }}</small>@endisset</article>
